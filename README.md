@@ -1,5 +1,5 @@
 ## Description
-- Github Indexer is a github profile searcher and indexer, where the user can register through the github name and url and we search and save the main profile data.
+Github Indexer is a github profile searcher and indexer, where the user can register through the github name and url and we search and save the main profile data.
 
 ## Requirements
 - Ruby: 2.6.5
@@ -29,6 +29,10 @@ $ brew install chromedriver
 If you are in a virtual machine, add to the Gemfile:
 ```
 gem 'chromedriver-helper'
+```
+For the link shortener to work, it is necessary to create an account on the site(https://bitly.com/pages/landing/free-plan), create an access token and place it in the .env file with the following title:
+```
+BIT_LY_ACCESS_TOKEN=<INSERT_YOUR_ACCESS_TOKEN_HERE>
 ```
 ## Usage
 
