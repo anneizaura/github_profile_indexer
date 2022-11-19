@@ -1,0 +1,61 @@
+.search-form {
+  display: flex;
+  form {
+    width: 60%;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    display: flex;
+    border-radius: 15px;
+  }
+}
+
+#query {
+  border-radius: 10px;
+  flex: 1 1 80%;
+  border: none;
+  border-radius: 15px;
+  &:focus {
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+  }
+}
+
+.btn-search {
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  color: grey;
+}
+
+.btn-x {
+  border: none;
+  color: grey;
+  font-weight: bold;
+  &:focus {
+    outline: none !important;
+  }
+  &:active {
+    outline: none !important;
+  }
+}
+
+.btn:focus {
+  outline: none !important;
+}
+
+
+
+@media(max-width: 700px) {
+  .geek-form {
+    width: 90% !important;
+    padding: 15px !important;
+  }
+
+  .search-form {
+  form {
+    width: 100%;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    display: flex;
+    border-radius: 15px;
+  }
+}
+}

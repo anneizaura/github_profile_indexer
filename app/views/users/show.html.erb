@@ -1,0 +1,45 @@
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="card rounded-4">
+          <div class="card-body p-4">
+            <div class="d-flex text-black">
+              <div class="flex-shrink-0">
+                <img src=<%= @user.img %>
+                  alt="github profile image" class="img-fluid"
+                  style="width: 180px; border-radius: 10px;">
+              </div>
+              <div class="mx-3">
+                <h5 class="mb-1"><%= @user.nick_name %></h5>
+                <p class="mb-2 pb-1 text-secondary"><%= @user.organization.length > 1 ? @user.organization + ", " : "" %><%= @user.location %></p>
+                <div class="d-flex rounded-3 p-2 mb-2 gap-3 bg-light">
+                  <div>
+                    <p class="small text-muted mb-1">Followers</p>
+                    <p class="mb-0"><%= @user.followers %></p>
+                  </div>
+                  <div>
+                    <p class="small text-muted mb-1">Following</p>
+                    <p class="mb-0"><%= @user.following %></p>
+                  </div>
+                  <div>
+                    <p class="small text-muted mb-1">Stars</p>
+                    <p class="mb-0"><%= @user.stars %></p>
+                  </div>
+                <div>
+                    <p class="small text-muted mb-1">Contributions</p>
+                    <p class="mb-0"><%= @user.contributions %></p>
+                  </div>
+                </div>
+                <div class="pt-1 d-flex gap-3">
+                  <%= link_to fa_icon("backward"), users_path, class: "btn btn-secondary btn-sm" %>
+                  <%= link_to fa_icon("repeat"), user_path, class: "btn btn-primary text-white btn-sm" %>
+                  <%= link_to fa_icon("pencil"), edit_user_path(@user), class: "btn btn-warning text-white btn-sm" %>
+                  <%= button_to fa_icon("trash"), @user, method: :delete, class: "btn btn-danger text-white btn-sm" %>
+                  <%= link_to fa_icon("link"), @user.short_url, class: "btn btn-outline-primary btn-sm" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <p style="color: green"><%= notice %></p>
+    </div>
+  </div>

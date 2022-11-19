@@ -1,0 +1,10 @@
+<div class="container py-5 h-100">
+<h1>Editing user</h1>
+
+<%= render "form", user: @user %>
+
+<div class="mt-5 d-flex gap-3">
+  <%= link_to fa_icon("backward"), users_path, class: "btn btn-secondary btn-lg" %>
+  <%= link_to fa_icon("eye"), @user, class: "btn btn-info btn-lg" %>
+</div>
+</div>
